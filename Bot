@@ -1,5 +1,5 @@
 # Connect to the Minecraft server
-mc = Minecraft.create("your_server_address", "your_username")
+mc = Minecraft.create("Lenardrevie1212.aternos.me", "ozeryo2319")
 
 # Main bot loop
 while True:
@@ -16,7 +16,7 @@ while True:
     # Wait for 1 second
     time.sleep(1)
 # Connect to the Minecraft server
-mc = Minecraft.create("server_address", "username")
+mc = Minecraft.create("Lenardrevie1212.aternos.me", "ozeryo2319")
 
 # Bot loop
 while True:
@@ -41,7 +41,7 @@ from pyCraft import *
 import time
 
 # Connect to the Minecraft server
-mc = Minecraft.create("server_address", "username")
+mc = Minecraft.create("Lenardrevie1212.aternos.me", "ozeryo2319")
 
 # Bot loop
 while True:
@@ -62,7 +62,7 @@ while True:
 
     time.sleep(1)  # Wait for 1 second
 # Connect to the Minecraft server
-mc = Minecraft.create("server_address", "username")
+mc = Minecraft.create("Lenardrevie1212.aternos.me", "ozeryo2319")
 
 # Read the commands from the file
 with open("commands.txt", "r") as file:
@@ -84,7 +84,7 @@ while True:
 
     time.sleep(1)  # Wait for 1 second
 # Connect to the Minecraft server
-mc = Minecraft.create("server_address", "username")
+mc = Minecraft.create("Lenardrevie1212.aternos.me", "ozeryo2319")
 
 # Bot loop
 while True:
