@@ -61,3 +61,45 @@ while True:
             # For example, you can teleport the bot to a mining area and start building a house together
 
     time.sleep(1)  # Wait for 1 second
+# Connect to the Minecraft server
+mc = Minecraft.create("server_address", "username")
+
+# Read the commands from the file
+with open("commands.txt", "r") as file:
+    commands = file.read().splitlines()
+
+# Bot loop
+while True:
+    # Check for chat messages
+    messages = mc.events.pollChatPosts()
+    for message in messages:
+        # Check if the message matches any of the commands
+        for command in commands:
+            if command.lower() in message.message.lower():
+                # Respond with the matching command
+                mc.postToChat("You said: " + command)
+
+                # Code to handle the specific command
+                # Write the necessary code here to handle the command
+
+    time.sleep(1)  # Wait for 1 second
+# Connect to the Minecraft server
+mc = Minecraft.create("server_address", "username")
+
+# Bot loop
+while True:
+    # Check for chat messages
+    messages = mc.events.pollChatPosts()
+    for message in messages:
+        if "Attack mobs" in message.message:
+            # Get the player's position
+            player_pos = mc.player.getTilePos()
+
+            # Get the nearby entities (mobs)
+            entities = mc.entity.getEntitiesWithinRadius(player_pos.x, player_pos.y, player_pos.z, 10, 1)
+
+            # Attack the mobs
+            for entity in entities:
+                mc.entity.attack(entity)
+
+    time.sleep(1)  # Wait for 1 second
