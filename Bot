@@ -37,3 +37,27 @@ while True:
                 # Perform the attack logic here for the specified player
 
     time.sleep(1)  # Wait for 1 second
+from pyCraft import *
+import time
+
+# Connect to the Minecraft server
+mc = Minecraft.create("server_address", "username")
+
+# Bot loop
+while True:
+    # Check for chat messages
+    messages = mc.events.pollChatPosts()
+    for message in messages:
+        if "Play survival" in message.message:
+            # Respond with "Let's play survival!"
+            mc.postToChat("Let's play survival!")
+
+            # Teleport the bot to the player's location
+            player_pos = mc.player.getTilePos()
+            mc.player.setTilePos(player_pos.x, player_pos.y, player_pos.z)
+
+            # Code to start playing survival with the user
+            # Write the necessary code here to join the user in survival mode
+            # For example, you can teleport the bot to a mining area and start building a house together
+
+    time.sleep(1)  # Wait for 1 second
